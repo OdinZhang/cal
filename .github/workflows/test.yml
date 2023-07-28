@@ -1,8 +1,6 @@
 name: 'update'
 
-on:
-  schedule:
-    - cron: '0,15,30,45 * * * *'
+on: workflow_dispatch
     
 jobs:
   build:
