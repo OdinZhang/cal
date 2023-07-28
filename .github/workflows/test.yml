@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - name: checkout
-        uses: actions/chechout@main
+        uses: actions/checkout@main
         with:
           ref: main
       
