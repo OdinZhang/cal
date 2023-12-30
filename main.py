@@ -40,15 +40,5 @@ for name, url, udate, uid in zip(comic_name, comic_url, comic_date, comic_id):
 
 flag = False
 
-with open('cal.ics', 'rb') as f:
-    if f.read() != cal.to_ical():
-        flag = True
-
-if flag:
-    with open('cal.ics', 'wb') as f:
+with open('cal.ics', 'wb') as f:
         f.write(cal.to_ical())
-    print("Updated")
-    exit(0)
-else:
-    print("Not change")
-    exit(1)
