@@ -36,7 +36,7 @@ jobs:
           git commit -m "Update"
 
       - name: Push
-        uses: EndBug/add-and-commit@v9
+        uses: ad-m/github-push-action@master
         with:
-          author_name: Austin Lee
-          author_email: Austin__Lee@outlook.com
+          github_token: ${{secrets.UPDATE}}
+          branch: main
