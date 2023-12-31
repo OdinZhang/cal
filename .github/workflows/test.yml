@@ -3,6 +3,7 @@ name: 'update'
 on:
   schedule:
     - cron: 0 0 15 * *
+  workflow_dispatch:
     
 jobs:
   build:
@@ -35,7 +36,7 @@ jobs:
           git commit -m "Update"
 
       - name: Push
-        uses: ad-m/github-push-action@master
+        uses: EndBug/add-and-commit@v9
         with:
-          github_token: ${{secrets.UPDATE}}
-          branch: main
+          author_name: Austin Lee
+          author_email: Austin__Lee@outlook.com
